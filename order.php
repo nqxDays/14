@@ -3,13 +3,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Собираем данные из формы
     $name = htmlspecialchars($_POST['name']);
     $phone = htmlspecialchars($_POST['phone']);
-    $email = 'test@test.mail';
+    $email = '';
     $ip = $_SERVER['REMOTE_ADDR']; // Получаем IP пользователя
-    $country = 'KZ'; // Замените на актуальную страну
-    $language = 'ru'; // Язык лидов
-    $link_id = 17; // ID ссылки
-    $funnel = 'kapitalkaspi1'; // Название воронки
-    $source = 'form_submission'; // Источник
+    $country = ''; // Замените на актуальную страну
+    $language = ''; // Язык лидов
+    $link_id = ; // ID ссылки
+    $funnel = ''; // Название воронки
+    $source = ''; // Источник
 
     // Убедитесь, что все обязательные поля заполнены
     if (empty($name) || empty($phone) || empty($email)) {
@@ -30,8 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     ];
 
     // URL и API-токен
-    $apiUrl = 'https://tracking.l0teamcrm.digital/api/v3/integration';
-    $apiToken = 'iN7D0Haqx8x17484CHHNBUMQf47SuOrSQRpCwf2OstkVh9qHONKANLdWBhvF'; // Замените на ваш токен API
+    $apiUrl = '';
+    $apiToken = ''; // Замените на ваш токен API
 
     // Отправка запроса через cURL
     $ch = curl_init();
